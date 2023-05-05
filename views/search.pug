@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    if errors
+        each error in errors 
+            p(style="color:red") #{error.msg}
+    h1 Search by Name 
+    form(method="POST", action="/movie/search")
+        #form-group 
+            label Name:
+            input.form-control(name="name", type="text")
+            br
+        input.btn.btn-primary(type="submit", value="Search")

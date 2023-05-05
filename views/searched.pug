@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 Searched
+    h1= movie.name 
+    h5 Description: #{movie.description}
+    p Rating: #{movie.rating}
+    p Year: #{movie.year}
+    label Genres:
+    ul
+    each genre in movie.genres
+        li #{genre}
